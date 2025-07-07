@@ -1,0 +1,105 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    // Variants
+    &.primary {
+        background: linear-gradient(135deg, #9BB2E5 0%, #698CBF 100%);
+        color: white;
+
+        &:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(155, 178, 229, 0.4);
+        }
+
+        &:active:not(:disabled) {
+            transform: translateY(0);
+        }
+    }
+
+    &.secondary {
+        background-color: #f3f4f6;
+        color: #374151;
+
+        &:hover:not(:disabled) {
+            background-color: #e5e7eb;
+            transform: translateY(-1px);
+        }
+    }
+
+    &.outline {
+        background-color: transparent;
+        color: #667eea;
+        border: 2px solid #667eea;
+
+        &:hover:not(:disabled) {
+            background-color: #667eea;
+            color: white;
+            transform: translateY(-1px);
+        }
+    }
+
+    // Sizes
+    &.sm {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+
+        @media (max-width: 768px) {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+    }
+
+    &.md {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+
+        @media (max-width: 768px) {
+            padding: 0.625rem 1.25rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    &.lg {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+
+        @media (max-width: 768px) {
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+        }
+    }
+
+    .spinner {
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid transparent;
+        border-top: 2px solid currentColor;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    .loadingText {
+        opacity: 0.7;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
