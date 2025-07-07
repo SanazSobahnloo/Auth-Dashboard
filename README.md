@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Auth Dashboard App
 
-## Getting Started
+A simple and responsive authentication project developed with **Next.js (App Router)**, **TypeScript**, and **SCSS Modules** .
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Task Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project was completed based on the following requirements:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Build a basic **authentication system** with two pages:
+  - `/auth` – Login page with a phone number input and login button
+  - `/dashboard` – Simple dashboard with a welcome message
+- Fetch random user data from API and redirect after login
+- Validate Iranian phone numbers
+- Use **SCSS Modules** with **nesting**
+- Ensure the layout is fully **responsive**
+- Store user data using `localStorage`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Built with **Next.js (App Router)**
+- Developed in **TypeScript**
+- Styled using **SCSS Modules** with nested class selectors
+- Custom reusable **Input** and **Button** components
+- Validates Iranian phone numbers (only frontend validation)
+- Calls `https://randomuser.me/api/?results=1&nat=us` on login
+- Stores user data in `localStorage`
+- Redirects authenticated users to `/dashboard`
+- Protects `/dashboard` route – redirects unauthenticated users to `/auth`
+- Responsive layout for mobile and desktop
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
